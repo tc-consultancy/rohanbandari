@@ -14,8 +14,8 @@ export default function About() {
                 <p className="text-[15px] md:text-base font-medium text-neutral-800">I've consistently focused on delivering measurable impact. For example, I developed recommendation engines and demand forecasting models that boosted inventory accuracy by 35% and designed fraud detection pipelines that cut fraudulent claims by 60%, providing explainable insights to analysts.</p>
                 <p className="text-[15px] md:text-base font-medium text-neutral-800">My foundation in this field is built on a strong academic backgrounds</p>
                 <section className="flex flex-col md:flex-row gap-12 py-4 items-center justify-center w-full">
-                    <div className="h-28 flex-1 border-2 border-neutral-300 rotate-3 shadow-2xs text-start py-6 px-8 rounded-full relative">
-                        <div className="bg-black h-[72px] w-[72px] rounded-full absolute -top-4 -right-4 flex items-center justify-center text-white shadow-lg">
+                    <div className="h-28 flex-1 w-[95%] md:w-auto border-2 border-neutral-300 rotate-3 shadow-2xs text-start py-6 px-8 rounded-full relative">
+                        <div className="bg-black h-[60px] w-[60px] md:h-[72px] md:w-[72px] rounded-full absolute -top-4 -right-4 flex items-center justify-center text-white shadow-lg">
                             <div className="text-center">
                                 <div className="text-xl font-bold">3.72</div>
                                 <div className="text-[10px] opacity-70 -mt-1">/ 5.0</div>
@@ -23,18 +23,18 @@ export default function About() {
                         </div>
 
                         <h4 className="text-lg md:text-xl leading-tight font-semibold">
-                        Vidya Jyothi Institute Of Technology</h4>
+                        Vidya Jyothi Institute Of Tech.</h4>
                         <p className="text-xs md:text-sm leading-tight text-neutral-600">Bachelor of Technology - BTech</p>
                         <p className="text-xs md:text-sm leading-tight text-neutral-600">2019 - 2023</p>
                     </div>
-                    <div className="h-28 flex-1 border-2 border-neutral-300 -rotate-3 shadow-2xs text-start py-6 px-8 rounded-full relative">
-                        <div className="bg-black h-[72px] w-[72px] rounded-full absolute -top-9 md:-top-4 -left-4 md:left-auto md:-right-4 flex items-center justify-center text-white shadow-lg">
+                    <div className="h-28 flex-1 w-[95%] md:w-auto border-2 border-neutral-300 -rotate-3 shadow-2xs text-start py-6 px-8 rounded-full relative">
+                        <div className="bg-black h-[60px] w-[60px] md:h-[72px] md:w-[72px] rounded-full absolute -top-9 md:-top-4 -left-4 md:left-auto md:-right-4 flex items-center justify-center text-white shadow-lg">
                             <div className="text-center">
                                 <div className="text-xl font-bold">8.75</div>
                                 <div className="text-[10px] opacity-70 -mt-1">/ 10.0</div>
                             </div>
                         </div>
-                        <h4 className="text-lg md:text-xl leading-tight font-semibold">University of North Texas</h4>
+                        <h4 className="text-lg md:text-xl leading-tight font-semibold">University of North Texas.</h4>
                         <p className="text-xs md:text-sm leading-tight text-neutral-600">Master of Science - MS, Computer Science</p>
                         <p className="text-xs md:text-sm leading-tight text-neutral-600">2023 - 2025</p>
                     </div>

@@ -51,7 +51,7 @@ export default function Navbar() {
                     <img src="/svgs/github.svg" className="h-full w-full z-10" />
                 </motion.a>
                 <motion.a
-                href="#"
+                href="https://docs.google.com/document/d/108ThfdfFE3LMRMznP58uIAWKV7L0bJhB/edit?tab=t.0"
                 target="_blank"
                     className="rounded-full block md:hidden  p-2 h-10 w-10 cursor-pointer hover:bg-neutral-100 relative"
                     variants={variants}
@@ -59,7 +59,7 @@ export default function Navbar() {
                     <img src="/svgs/resume.jpg" className="h-full w-full z-10 rounded-full" />
                 </motion.a>
                 <motion.a
-                href="#"
+                href="https://docs.google.com/document/d/108ThfdfFE3LMRMznP58uIAWKV7L0bJhB/edit?tab=t.0"
                 target="_blank"
                     className="px-6 py-2 md:block hidden bg-black rounded-[32px] text-white"
                     variants={variants}

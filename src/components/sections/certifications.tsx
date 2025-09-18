@@ -13,37 +13,63 @@ const certificationsData: Certification[] = [
     issuer: "DeepLearning.AI",
     platform: "Coursera",
     logoText: "AI",
-    url: "#", // Replace with actual credential URL
+    url: "https://drive.google.com/file/d/1DCw4wCNMD7J2MwGyXMz6z9PjqBh6q1Xz/view?usp=sharing",
   },
   {
     name: "COVID19 Data Analysis Using Python",
     issuer: "Coursera",
     logoText: "DA",
-    url: "#", // Replace with actual credential URL
+    url: "https://drive.google.com/file/d/1oe1LqTrqNqLndHKY6787RrZ4yMNf9BD1/view?usp=sharing",
   },
   {
     name: "Create Your Own ChatGPT-like Website with Open Source LLMs",
     issuer: "IBM",
     logoText: "IBM",
-    url: "https://courses.cognitiveclass.ai/certificates/93ddbe396aac4db6b302471ef658465d#", // Replace with actual credential URL
+    url: "https://courses.cognitiveclass.ai/certificates/93ddbe396aac4db6b302471ef658465d#",
   },
   {
     name: "Database Programming with SQL",
     issuer: "Oracle",
     logoText: "SQL",
-    url: "#", // Replace with actual credential URL
-  },
-  {
-    name: "Microsoft Certified: Azure AI Engineer Associate",
-    issuer: "Microsoft",
-    logoText: "AZ",
-    url: "#", // Replace with actual credential URL
+    url: "https://drive.google.com/file/d/18vplbxqobzOgWzFQukL7z3H7aaw6ULR4/view?usp=sharing",
   },
   {
     name: "Programming Essentials in Python",
     issuer: "Cisco",
     logoText: "Py",
-    url: "#", // Replace with actual credential URL
+    url: "https://drive.google.com/file/d/1gJ65XtI9SrthxRfE3wvmno8JA8cuUOS5/view?usp=sharing",
+  },
+  {
+    name: "Internet of Things: Communication Technologies",
+    issuer: "Coursera",
+    logoText: "IoT",
+    url: "https://drive.google.com/file/d/1cboeGRV3ytyPI8N1Sa1oBZkjSS4RWoTB/view?usp=sharing",
+  },
+  {
+    name: "Data Science Math Skills",
+    issuer: "Duke University",
+    platform: "Coursera",
+    logoText: "DS",
+    url: "https://drive.google.com/file/d/1iQDAwkGAK3lBrEcDMkH1FBpf2AgsgiAr/view?usp=sharing",
+  },
+  {
+    name: "Predict Future Product Prices Using Facebook Prophet",
+    issuer: "Coursera",
+    logoText: "FB",
+    url: "https://drive.google.com/file/d/1uzCSpHSWGfqlnI9owVuZuHaiPcMq0O0B/view?usp=sharing",
+  },
+  {
+    name: "Project Management",
+    issuer: "Google",
+    platform: "Coursera",
+    logoText: "PM",
+    url: "https://drive.google.com/file/d/1VvXUresnUynUIiT8u9EPbK03RADudnnp/view?usp=sharing",
+  },
+  {
+    name: "Programming Essentials in C++",
+    issuer: "Cisco",
+    logoText: "C++",
+    url: "https://drive.google.com/file/d/1E09TOzb3NBLZzOTddlw3trCzkRRt-jWv/view?usp=sharing",
   },
 ];
 
@@ -67,18 +93,16 @@ const CertificationCard = ({ cert }: { cert: Certification }) => (
         </div>
       </div>
     </div>
-    {
-        cert.url !== '#' && (
+    {cert.url !== '#' && (
       <a
         href={cert.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm   w-full bg-gray-200 hover:bg-gray-400 px-6 py-3 text-center font-semibold transition-colors duration-200"
+        className="text-sm w-full bg-gray-200 hover:bg-gray-400 px-6 py-3 text-center font-semibold transition-colors duration-200"
       >
-        Show Credential &rarr;
+        {cert.url.includes('drive.google.com') ? 'View' : 'Show Credential'}
       </a>
-        )
-    }
+    )}
   </div>
 );
 
@@ -115,7 +139,7 @@ const PublicationCard = ({ pub }: { pub: Publication }) => (
           </p>
         </div>
       </div>
-      <p className="mt-6 text-base text-neutral-700 leading-relaxed">{pub.description}</p>
+      <p className="mt-6 text-sm md:text-base text-neutral-700 leading-relaxed">{pub.description}</p>
     </div>
     {pub.url !== '#' && (
       <a

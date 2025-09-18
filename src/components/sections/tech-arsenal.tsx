@@ -1,76 +1,73 @@
 import React from 'react';
-import assets from '../../assets/assets'; // Import the assets array
-import { Marquee } from '../shared/margue';
 import { cn } from '../../lib/utils';
 
-
+// Skills array with your technologies
+const skills = [
+  'Python', 'SQL',
+  'Jupyter Notebook', 'JupyterLab', 'Amazon SageMaker', 'Google Colab', 'VS Code', 'PyCharm',
+  'NumPy', 'Pandas','Matplotlib', 'Seaborn', 'SciPy', 'Power BI', 'Tableau', 'Plotly', 'Excel',
+  'CNNs', , 'LSTM', 'VAEs', 'GANs', 'Attention Mechanisms', 'Self-Attention', 'PyTorch', 'TensorFlow',
+  'OpenAI LLMs', 'Hugging Face', 'LangChain', 'RAG', 'AutoGen', 'CrewAI', 'LangGraph',
+  'Chroma', 'Faiss', 'Milvus', 'Pinecone',
+  // 'Chain of Thought (CoT)', 'Few-shot Prompting',
+  // 'MLflow', 'Kedro', 'Apache Airflow', 'Docker', 'Kubernetes', 'FastAPI',
+  // 'AWS (S3, SageMaker)', 'Azure (OpenAI, AKS)', 'Google Cloud Platform (Vertex AI)',
+  // 'MongoDB', 'NoSQL', 'Snowflake', 'Git', 'Bitbucket',
+  // 'SHAP', 'LIME', 'AUC-ROC',
+  // 'Scikit-learn', 'XGBoost', 'LightGBM', 'Random Forest', 'Logistic Regression', 'Autoencoders', 'CatBoost', 'ARIMA', 'SARIMA', 'SARIMAX', 'Prophet', 'TFT',
+  // 'NLTK', 'spaCy', 'Gensim', 'Transformers', 'BERT', 'GPT', 'NER', 'Sentiment Analysis', 'OpenAI Embeddings', 'Chatbots', 'Information Extraction'
+];
 
 const TechArsenal: React.FC = () => {
-
-    return (
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className='absolute h-full bg-gradient-to-r from-transparent to-white top-0 bottom-0 right-0 w-10 z-50'></div>
-          <div className='absolute h-full bg-gradient-to-r from-white to-transparent top-0 bottom-0 left-0 w-10 z-50'></div>
-
-      <Marquee pauseOnHover className="[--duration:120s]" animate={false} offset={320}>
-        {assets.map((review) => (
-          <ReviewCard key={review.name} img={review.path} name={review.name}  />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:120s]"  animate={false} offset={230}>
-        {assets.map((review) => (
-          <ReviewCard key={review.name} img={review.path} name={review.name} />
-        ))}
-      </Marquee>
-
-      <Marquee pauseOnHover className="[--duration:120s]" animate={false} offset={100}>
-        {assets.map((review) => (
-          <ReviewCard key={review.name} img={review.path} name={review.name} />
-        ))}
-      </Marquee>
-
-      <Marquee reverse pauseOnHover className="[--duration:120s]" animate={false} offset={440}>
-        {assets.map((review) => (
-          <ReviewCard key={review.name} img={review.path} name={review.name} />
-        ))}
-      </Marquee>
-      
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+  return (
+    <div className="relative w-full px-4 ">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+        {skills.map((skill, index) => {
+          // Calculate row index based on grid columns
+          // For responsive design, we'll use a base calculation that works across breakpoints
+          const baseCols = 2; // Base columns for mobile
+          const rowIndex = Math.floor(index / baseCols);
+          const isEvenRow = rowIndex % 2 === 0;
+          
+          return (
+            <SkillCard 
+              key={skill} 
+              skill={skill!} 
+              className={isEvenRow ? 'translate-x-4' : '-translate-x-4'}
+            />
+          );
+        })}
+      </div>
     </div>
-    );
+  );
 };
 
 export default TechArsenal;
 
 
-const ReviewCard = ({
-    img,
-  }: {
-    img: string;
-    name: string;
-
-  }) => {
-    
-    return (
-      <figure
-        className={cn(
-          "relative h-full w-54 cursor-pointer overflow-hidden rounded-xl",
-          // light styles
-          "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-          // dark styles
-          "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-        )}
-      >
-        <div className="flex flex-row relative w-48 items-center justify-center p-2 bg-neutral-300/40 h-24 rounded-3xl">
-          <img className="rounded-md mx-auto  h-9 w-fit object-contain object-center absolute" alt="" src={img} />
-          {/* <div className="flex flex-col"> */}
-            {/* <figcaption className="text-sm font-medium dark:text-white">
-              {name}
-            </figcaption> */}
-          {/* </div> */}
-        </div>
-      </figure>
-    );
-  };
-   
+const SkillCard = ({
+  skill,
+  className
+}: {
+  skill: string;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={cn(
+        "relative cursor-pointer overflow-hidden rounded-xl py-2 px-3 transition-all duration-300 hover:scale-105",
+        // light styles
+        "border-gray-950/[.1]  text-black bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] text-black dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        className
+      )}
+    >
+      <div className="flex items-center justify-center p-2 bg-neutral-300/40 rounded-3xl min-h-[60px]">
+        <span className="text-sm sm:text-base font-semibold text-black  text-center leading-tight">
+          {skill}
+        </span>
+      </div>
+    </div>
+  );
+};

@@ -181,7 +181,7 @@ function App() {
           <section
             className="flex  bg-transparent h-full w-full flex-col justify-end  rounded-[32px] relative"
           >
-            <h2 className="text-3xl md:text-6xl  block leading-32 mt-8 md:mt-0  tracking-[0.12em] md:tracking-[0.2em] font-bold text-neutral-900 ">Certifications n publication</h2>
+            <h2 className="text-3xl md:text-6xl  block mt-8 mb-6 md:mt-0  tracking-[0.12em] md:tracking-[0.2em] font-bold text-neutral-900 ">Certifications n publication</h2>
             <Cert />
           </section>
 

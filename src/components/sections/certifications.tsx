@@ -88,7 +88,7 @@ export default function Cert() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
        
-          <p className=" max-w-2xl mx-auto text-xl text-neutral-600">
+          <p className=" max-w-2xl mx-auto text-lg md:text-xl text-neutral-600">
             My commitment to continuous learning and professional development.
           </p>
         </div>

@@ -1,11 +1,11 @@
-import { scribble01 } from "../../assets";
+import { rohan, scribble01 } from "../../assets";
 
 export default function About() {
     return (
         <div className='relative'>
             <div className='h-44 w-44 mx-auto rounded-full bg-gray-400 relative'>
                 <img src={scribble01} alt="clink" className="absolute -top-12 -right-6 h-16 w-16" />
-
+                <img src={rohan} alt="rohan" className="h-full w-full rounded-full object-contain" />
             </div>
 
             <div className="space-y-3 max-w-5xl  text-center mt-8 mx-auto">

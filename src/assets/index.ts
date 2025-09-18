@@ -45,7 +45,9 @@ import rou from '../assets/rou.svg'
 import scribble01 from '../assets/scribble/scribble01.png'
 import particle01 from '../assets/scribble/particle01.svg'
 import particle01b from '../assets/scribble/particle01b.svg'
+import rohan from './rohan.png'
 export {
+    rohan,
     scribble01,
     particle01,
     particle01b,

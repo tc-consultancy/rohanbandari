@@ -11,6 +11,7 @@ import Hero from "./pages/hero";
 import TechArsenalMobile from "./components/sections/tech-arsenal-mobile";
 import Cta from "./pages/cta";
 import About from "./components/sections/about";
+import Cert from "./components/sections/certifications";
 
 
 
@@ -153,7 +154,7 @@ function App() {
             <h2 className="text-3xl md:text-6xl  block leading-32 mb-12 md:mb-0   tracking-[0.12em] md:tracking-[0.2em] font-bold text-neutral-900 ">About Me</h2>
             <About />
           </section>
-
+         
 
           {/* Projects */}
           <section
@@ -176,6 +177,16 @@ function App() {
             <h2 className="text-3xl md:text-6xl  block leading-32 mt-8 md:mt-0 md:leading-48  tracking-[0.12em] md:tracking-[0.2em] font-bold text-neutral-900 ">Skills</h2>
             <TechArsenalMobile />
           </section>
+
+          <section
+            className="flex  bg-transparent h-full w-full flex-col justify-end  rounded-[32px] relative"
+          >
+            <h2 className="text-3xl md:text-6xl  block leading-32 mt-8 md:mt-0  tracking-[0.12em] md:tracking-[0.2em] font-bold text-neutral-900 ">Certifications n publication</h2>
+            <Cert />
+          </section>
+
+
+         
           <Cta/>
 
         </div>

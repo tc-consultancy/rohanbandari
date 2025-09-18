@@ -43,7 +43,7 @@ export default function Navbar() {
                     <img src="/svgs/linkedin.svg" className="h-full w-full z-10" />
                 </motion.a>
                 <motion.a
-                href="https://github.com/IrfanshaikH-7"
+                href="https://github.com/rohanbandari9"
                 target="_blank"
                     className="rounded-full p-2 h-10 w-10 cursor-pointer hover:bg-neutral-100 relative"
                     variants={variants}

@@ -2,7 +2,7 @@ import { motion, } from "motion/react";
 import { charVariantWithDelay, containerWithDelay, staggeredVariantsWithDelay } from "../../variants/stagger";
 
 export default function Navbar() {
-  const name = "Rohan Bandari".split("");
+  const name = "Rohan     Bandari".split("");
 
     const variants = {
         hidden: { opacity: 0, y: -50 },

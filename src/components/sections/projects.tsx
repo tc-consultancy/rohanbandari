@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "../../lib/utils";
+import { a, b,a1, b1, c1, c } from "../../assets";
 
 // const projects = [1, 2, 3, 4, 5];
 const projects = [
@@ -13,8 +14,8 @@ const projects = [
             "Automated compliance document analysis, reducing manual audit workload by 75%.",
             "Deployed enterprise-ready workflows ensuring security, scalability, and real-time insights."
         ],
-        techStack: ["LangChain", "CrewAI", "OpenAI", "Python", "AWS"],
-        image: "https://dummyimage.com/600x400/000/fff&text=Compliance+GenAI"
+        techStack: ["LangChain", "CrewAI", "OpenAI", "Python",'AI/ML'],
+        image: [a,a1]
     },
     {
         title: "Insurance Fraud Detection",
@@ -25,8 +26,8 @@ const projects = [
             "Enabled real-time fraud scoring for healthcare insurance claims with high accuracy.",
             "Integrated explainable AI dashboards for transparent model decisions."
         ],
-        techStack: ["XGBoost", "SHAP", "AWS SageMaker", "Python"],
-        image: "https://dummyimage.com/600x400/000/fff&text=Fraud+Detection"
+        techStack: ["XGBoost", "SHAP", "AWS SageMaker", "Python",'AI/ML'],
+        image: [b1,b]
     },
     {
         title: "Retail Demand Forecasting",
@@ -38,7 +39,7 @@ const projects = [
             "Implemented scalable pipelines for continuous training and real-time forecasting."
         ],
         techStack: ["LSTM", "TFT", "TensorFlow", "Python", "AWS"],
-        image: "https://dummyimage.com/600x400/000/fff&text=Retail+Forecasting"
+        image: [c,c1]
     }
 ];
 
@@ -87,13 +88,14 @@ export default function Projects() {
                             exit="exit"
                         >
                             <section className="flex gap-2  relative ">
-                                <div className="bg-black/20 -rotate-6 rounded-3xl h-64 w-[420px]">
-{/* imge1  */}
+                                <div className="bg-black/20 -rotate-6  border-2 border-neutral-300 rounded-3xl h-64 w-[420px] overflow-hidden ">
+{/* imge1  */}{projects[displayedIndex].image[0] && <img src={projects[displayedIndex].image[0]} alt={projects[displayedIndex].title} className="h-full w-full object-fill" />}
                                 </div>
-                                <div className="bg-black/20 -rotate-6 -bottom-[50%] right-[20%] rounded-3xl hidden xl:block h-48 w-[320px] absolute">
-                                    {/* img-2  */}
+                                <div className="bg-black/20 -rotate-6 overflow-hidden -bottom-[54%] right-[20%] rounded-3xl hidden xl:block h-48 w-[320px] absolute">
+                                    {/* imge1  */}{projects[displayedIndex].image[1] && <img src={projects[displayedIndex].image[1]} alt={projects[displayedIndex].title} className="h-full w-full object-fill" />}
+
                                 </div>
-                                <div className="mt-16 -ml-12 z-10 ">
+                                <div className="mt-16 -ml-4 z-10 ">
                                     <h3 className="text-4xl font-bold">{projects[displayedIndex].title}</h3>
                                     <ul className="list-disc ml-4 mt-4 text-neutral-600 text-base max-w-2xl font-medium">
                                         {
@@ -129,6 +131,12 @@ export default function Projects() {
                                 {
                                     projects[displayedIndex]?.techStack[3] && (
                                         <button className="px-4 py-1 bg-black rounded-full text-white rotate-6 shadow-md">{projects[displayedIndex]?.techStack[3]}</button>
+                                    )
+                                    
+                                }
+                                {
+                                    projects[displayedIndex]?.techStack[4] && (
+                                        <button className="px-4 py-1 bg-black rounded-full text-white -rotate-[22deg] shadow-md">{projects[displayedIndex]?.techStack[4]}</button>
                                     )
                                     
                                 }
@@ -176,7 +184,8 @@ export default function Projects() {
                 {
                     projects.map((_,idx) => (
                         <div key={idx}>
-                            <div className="h-40 w-4/5 bg-neutral-200  rounded-2xl -rotate-6">
+                            <div className="h-40 w-4/5 bg-neutral-200  rounded-2xl -rotate-6 border-2 border-neutral-300 overflow-hidden">
+                            {_.image[0] && <img src={_.image[0]} alt={_.title} className="h-full w-full object-cover" />}
                             </div>
                             <div></div>
                             <h2 className="text-xl sm:text-2xl max-w-[270px] w-full  relative ml-auto -mt-24 font-bold  text-end">{_.title}</h2>

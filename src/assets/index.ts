@@ -46,7 +46,19 @@ import scribble01 from '../assets/scribble/scribble01.png'
 import particle01 from '../assets/scribble/particle01.svg'
 import particle01b from '../assets/scribble/particle01b.svg'
 import rohan from './rohan.png'
+import a from './product/1.png'
+import a1 from './product/1.1.png'
+import b from './product/2.png'
+import b1 from './product/2.1.png'
+import c from './product/3.png'
+import c1 from './product/3.1.png'
 export {
+    a,
+    b,
+    a1,
+    b1,
+    c1,
+    c,
     rohan,
     scribble01,
     particle01,

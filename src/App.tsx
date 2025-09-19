@@ -51,7 +51,7 @@ function App() {
     };
   }, []);
 
-  const name = "Rohan Bandari".split("");
+  const name = "Rohan     Bandari".split("");
 
   // Mobile-optimized text animation variants
   const mobileContainer = {

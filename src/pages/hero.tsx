@@ -84,7 +84,7 @@ export default function Hero() {
                     <h3 className="border border-neutral-400/60 text-white text-sm text-center bg-white/5 w-fit mx-auto px-4 py-1 mb-4 rounded-full">Hey! I'm Rohan Bandari</h3>
                     <h3 className="text-white text-center text-[24px] md:text-[48px] md:leading-13  max-w-[880px] font-bitcount relative">
                         {/* <img src={particle01} alt="particle" className="h-24 w-24 absolute -left-16 -top-24 animate-pulse" /> */}
-                        Committed to creating <p className="text-black w-fit inline-block -rotate-6 mr-1 md:mr-0 md:-translate-y-4 bg-white px-4 md:py-1 rounded-full">AI </p> <br/>solutions that make a difference</h3>
+                        Committed to creating <p className="text-black w-fit inline-block -rotate-6 mr-1 md:mr-0 md:-translate-y-4 bg-white px-4 md:py-1 rounded-full">AI/ML </p> <br/>solutions that make a difference</h3>
                 </div>
                 <section className=" w-fit   mx-auto  absolute bottom-8  right-1/2 translate-x-1/2  ">
 
